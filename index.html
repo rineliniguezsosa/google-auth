@@ -7,7 +7,15 @@
     <title>Google signin</title>
   </head>
   <body>
-    <div id="root"></div>
+    <div style="width: 100%;height: max-content;" id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+    
+    <script>
+      function handleCredentialResponse(response) {
+        console.log("Token",response);
+        
+      }
+    </script>
+      
   </body>
 </html>
