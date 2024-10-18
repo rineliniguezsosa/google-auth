@@ -18,7 +18,7 @@ function App() {
   },[]);
 
   return (
-    <div style={{display:'flex',justifyContent:'center',border:'1px red solid',width:'100%',height:'500px'}}>
+    <div style={{display:'flex',flexDirection:'column',justifyContent:'center',alignItems:'center',border:'1px red solid',width:'100%',height:'500px'}}>
       <h1>Google auth</h1>
 
       <div id="g_id_onload"
