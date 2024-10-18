@@ -12,7 +12,17 @@
     
     <script>
       function handleCredentialResponse(response) {
-        console.log("Token",response);
+        console.log("Token",response.credential);
+        const body = { id_token:response };
+
+        fetch('http://localhost:8080/google-auth/google',{
+          method:'POST',
+          headers:{'Content-Type':'application/json'},
+          body:JSON.stringify(body)
+        })
+          .then(resp => resp.json())
+          .then(data => console.log(data))
+          .catch(error => console.log(error))
         
       }
     </script>
